@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-
-const API = "http://localhost:4000";
+const API = "https://your-backend.onrender.com";
 
 function App() {
   const [emails, setEmails] = useState([]);
