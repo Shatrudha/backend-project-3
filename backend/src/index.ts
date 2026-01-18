@@ -22,6 +22,7 @@ createBullBoard({
   serverAdapter,
 });
 
+
 app.use("/admin/queues", serverAdapter.getRouter());
 /* ----------------------------------------------------- */
 

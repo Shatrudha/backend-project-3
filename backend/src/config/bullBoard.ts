@@ -6,9 +6,12 @@ import { emailQueue } from "../queues/emailQueue";
 const serverAdapter = new ExpressAdapter();
 serverAdapter.setBasePath("/admin/queues");
 
+const queues = [new BullMQAdapter(emailQueue as any)];
+
 createBullBoard({
-  queues: [new BullMQAdapter(emailQueue)],
+  queues,
   serverAdapter,
 });
+
 
 export { serverAdapter };
