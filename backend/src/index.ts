@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
-import emailRoutes from "./routes/email.routes";
-
+import emailRoutes from "./routes/emailRoutes";
 
 import { emailQueue } from "./queues/emailQueue";
 

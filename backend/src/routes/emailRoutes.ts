@@ -4,6 +4,14 @@ import { prisma } from "../db/client";
 
 const router = Router();
 
+router.get("/", async (_req, res) => {
+  const emails = await prisma.email.findMany({
+    orderBy: { createdAt: "desc" },
+  });
+  res.json(emails);
+});
+
+
 router.post("/schedule", async (req, res) => {
   try {
     const { to, subject, body, sendAt } = req.body;
